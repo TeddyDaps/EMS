@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Projects</title>
+</head>
+<body>
+    <h1>List of Projects</h1>
+    <table border="1">
+        <tr>
+            <th>Project ID</th>
+            <th>Project Name</th>
+            <th>Status</th>
+            <th>Deadline</th>
+            <th>Description</th>
+            <th>Deliverables</th>
+            <th>Client ID</th>
+        </tr>
+        {% for project in projects %}
+        <tr>
+            <td>{{ project[0] }}</td>
+            <td>{{ project[1] }}</td>
+            <td>{{ project[2] }}</td>
+            <td>{{ project[3] }}</td>
+            <td>{{ project[4] }}</td>
+            <td>{{ project[5] }}</td>
+            <td>{{ project[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('add_project') }}">Add New Project</a>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

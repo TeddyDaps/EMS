@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Client</title>
+</head>
+<body>
+    <h1>Add New Client</h1>
+    <form method="POST">
+        <label for="client_name">Client Name</label>
+        <input type="text" name="client_name" required>
+        
+        <label for="contact_info">Contact Info</label>
+        <input type="text" name="contact_info" required>
+        
+        <label for="company_size">Company Size</label>
+        <input type="text" name="company_size" required>
+        
+        <label for="industry">Industry</label>
+        <input type="text" name="industry" required>
+        
+        <label for="consultant_id">Consultant ID</label>
+        <input type="number" name="consultant_id" required>
+        
+        <button type="submit">Add Client</button>
+    </form>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

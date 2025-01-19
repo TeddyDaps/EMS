@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultant Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to Your Dashboard</h1>
+    
+    <h2>Your Tasks</h2>
+    <table border="1">
+        <tr>
+            <th>Task Name</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Deadline</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task['Task_Name'] }}</td>
+            <td>{{ task['Task_Priority'] }}</td>
+            <td>{{ task['Task_Status'] }}</td>
+            <td>{{ task['Task_Deadline'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Your Active Projects</h2>
+    <table border="1">
+        <tr>
+            <th>Project Name</th>
+            <th>Status</th>
+            <th>Deadline</th>
+        </tr>
+        {% for project in projects %}
+        <tr>
+            <td>{{ project['Project_Name'] }}</td>
+            <td>{{ project['Project_Status'] }}</td>
+            <td>{{ project['Project_Deadline'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

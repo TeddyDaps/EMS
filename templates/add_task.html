@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+</head>
+<body>
+    <h1>Add New Task</h1>
+    <form method="POST">
+        <label for="task_name">Task Name</label>
+        <input type="text" name="task_name" required>
+
+        <label for="task_priority">Priority</label>
+        <input type="text" name="task_priority" required>
+
+        <label for="task_status">Status</label>
+        <input type="text" name="task_status" required>
+
+        <label for="task_deadline">Deadline</label>
+        <input type="date" name="task_deadline" required>
+
+        <label for="consultant_id">Consultant ID</label>
+        <input type="number" name="consultant_id" required>
+
+        <label for="project_id">Project ID</label>
+        <input type="number" name="project_id" required>
+
+        <button type="submit">Add Task</button>
+    </form>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

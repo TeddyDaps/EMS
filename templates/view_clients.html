@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Clients</title>
+</head>
+<body>
+    <h1>List of Clients</h1>
+    <table border="1">
+        <tr>
+            <th>Client ID</th>
+            <th>Client Name</th>
+            <th>Contact Info</th>
+            <th>Company Size</th>
+            <th>Industry</th>
+            <th>Consultant ID</th>
+        </tr>
+        {% for client in clients %}
+        <tr>
+            <td>{{ client[0] }}</td>
+            <td>{{ client[1] }}</td>
+            <td>{{ client[2] }}</td>
+            <td>{{ client[3] }}</td>
+            <td>{{ client[4] }}</td>
+            <td>{{ client[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('add_client') }}">Add New Client</a>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

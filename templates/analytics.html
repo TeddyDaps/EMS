@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard</title>
+</head>
+<body>
+    <h1>Analytics Dashboard</h1>
+    <h2>Total Clients: {{ total_clients }}</h2>
+    <h2>Active Projects: {{ active_projects }}</h2>
+    <h2>Completed Projects: {{ completed_projects }}</h2>
+
+    <h3>Consultant Performance</h3>
+    <table border="1">
+        <tr>
+            <th>Consultant ID</th>
+            <th>Tasks Completed</th>
+            <th>Active Tasks</th>
+        </tr>
+        {% for performance in consultant_performance %}
+        <tr>
+            <td>{{ performance[0] }}</td>
+            <td>{{ performance[1] }}</td>
+            <td>{{ performance[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

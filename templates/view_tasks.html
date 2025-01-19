@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Tasks</title>
+</head>
+<body>
+    <h1>List of Tasks</h1>
+    <table border="1">
+        <tr>
+            <th>Task ID</th>
+            <th>Task Name</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Deadline</th>
+            <th>Consultant ID</th>
+            <th>Project ID</th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{ task[0] }}</td>
+            <td>{{ task[1] }}</td>
+            <td>{{ task[2] }}</td>
+            <td>{{ task[3] }}</td>
+            <td>{{ task[4] }}</td>
+            <td>{{ task[5] }}</td>
+            <td>{{ task[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('add_task') }}">Add New Task</a>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

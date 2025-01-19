@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Project</title>
+</head>
+<body>
+    <h1>Add New Project</h1>
+    <form method="POST">
+        <label for="project_name">Project Name</label>
+        <input type="text" name="project_name" required>
+
+        <label for="project_status">Project Status</label>
+        <input type="text" name="project_status" required>
+
+        <label for="project_deadline">Project Deadline</label>
+        <input type="date" name="project_deadline" required>
+
+        <label for="project_description">Project Description</label>
+        <input type="text" name="project_description" required>
+
+        <label for="project_deliverables">Project Deliverables</label>
+        <input type="text" name="project_deliverables" required>
+
+        <label for="client_id">Client ID</label>
+        <input type="number" name="client_id" required>
+
+        <button type="submit">Add Project</button>
+    </form>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>
